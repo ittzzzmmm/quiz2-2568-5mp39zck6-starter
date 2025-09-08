@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IconReceiptEuro } from '@tabler/icons-react';
 
 interface HeaderComponentProps {
   opened: boolean;
@@ -33,6 +34,7 @@ export default function HeaderComponent({
             aria-label="Toggle navigation"
           />
         )}
+        
         <Text
           size="xl"
           fw={900}
@@ -41,6 +43,15 @@ export default function HeaderComponent({
         >
           TRACKER-APP
         </Text>
+         <ActionIcon
+          variant="filled"
+          color={isDark ? "yellow" : "blue"}
+          onClick={toggleColorScheme}
+          size="lg"
+          aria-label={isDark ? "Light mode" : "Dark mode"}
+        >
+          {isDark ? <IconReceiptEuro stroke={2} /> : <IconReceiptEuro stroke={2} />}
+        </ActionIcon>
       </Group>
       <Group gap={5}>
         <ActionIcon
