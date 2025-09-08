@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AddModal from "../components/Modal"
-import { Button, Stack, Title, Divider, Container, factory } from "@mantine/core";
+import { Button, Stack, Title, Divider, Container } from "@mantine/core";
 import { v4 as uuidv4 } from "uuid";
 
 type Expense = {
@@ -13,11 +13,9 @@ type Expense = {
 export default function ExpenseTracker() {
   const [opened, setOpened] = useState(false);
   const [expenses, setExpenses] = useState<Expense[]>([]);
-  const categories = ["Food", "Transport", "Entertainment"];
 
-  const [foodCount , setFoodCount] = useState(0);
-  const [transportCount , setTransportCount] = useState(0);
-  const [entertainmentCount , setEntertainmentCount] = useState(0);
+
+
 
 
 
